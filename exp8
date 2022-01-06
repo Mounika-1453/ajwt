@@ -1,0 +1,137 @@
+
+Aim: Create and save an XML document at the server, which contains 10 users information.
+Write a program which takes User Id as input and returns the user details by taking the user
+information from the XML document.
+User.xml
+<?xml version=”1.0”?>
+<userlist>
+<user>
+<userid>usr01</userid>
+<username>Gouse</username>
+<address>DSNR</address>
+<phone>8801550101</phone>
+<email>Gouse.sheikh@gmail.com</email>
+</user>
+<user>
+<userid>usr02</userid>
+<username>D Divakar</username>
+<address>Ameerpet</address>
+<phone>9888888888</phone>
+<email>D Divakar@gmail.com</email>
+</user>
+<user>
+<userid>usr03</userid>
+<username>Rajinth</username>
+<address>SR Nagar</address>
+<phone>9866666666</phone>
+<email>Rajinth@yahoo.com</email>
+</user>
+<user>
+<userid>usr04</userid>
+<username>M Vijaya</username>
+<address>DESHMUKHI</address>
+<phone>9835994445</phone>
+<email>M Vijaya@yahoo.com</email>
+</user>
+<user>
+<userid>usr05</userid>
+<username>Kusuma</username>
+<address>KOTI</address>
+<phone>968877555</phone>
+<email>Kusuma@yahoo.com</email>
+</user>
+WEB TECHNOLOGIES LAB MRCET
+www.mrcet.ac.in DEPARTMENT OF CSE Page 24
+ <user>
+<userid>usr06</userid>
+<username>P Kalpana</username>
+<address>KOTI</address>
+<phone>968875554</phone>
+<email>P Kalpana@yahoo.com</email>
+</user>
+ <user>
+<userid>usr07</userid>
+<username>V Anitha</username>
+<address>KPHB</address>
+<phone>968888554</phone>
+<email>V Anitha@yahoo.com</email>
+</user>
+ <user>
+<userid>usr08</userid>
+<username>M Ramesh</username>
+<address>IBP</address>
+<phone>968878554</phone>
+<email>M Ramesh@yahoo.com</email>
+</user>
+<user>
+<userid>usr09</userid>
+<username>Raswitha</username>
+<address>DSNGR</address>
+<phone>968899554</phone>
+<email>Raswitha@yahoo.com</email>
+</user>
+<user>
+<userid>usr10</userid>
+<username>A Prasanna</username>
+<address>KPHB</address>
+<phone>9088008554</phone>
+<email>A Prasanna@yahoo.com</email>
+</user>
+</userlist>
+WEB TECHNOLOGIES LAB MRCET
+www.mrcet.ac.in DEPARTMENT OF CSE Page 25
+User.html
+<html>
+ <head>
+ <script language="javascript">
+ function fncDisplayInfo()
+ {
+var xhttp=null;
+var flag=0;
+var userid = document.frm.uname.value;
+var xmlDoc = new ActiveXObject("microsoft.xmldom");
+xmlDoc.load("user.xml");
+var noOfUsers = xmlDoc.getElementsByTagName("userlist")[0].childNodes.length;
+ for(var i=0;i<parseInt(noOfUsers);i++)
+ {
+ var uid
+=xmlDoc.getElementsByTagName("user")[i].childNodes[0].childNodes[0].nodeValue;
+if(uid == userid)
+{
+ document.write("<h1> User Details</h1>");
+var userName =
+xmlDoc.getElementsByTagName("user")[i].childNodes[1].childNodes[0].nodeValue;
+var Address
+=xmlDoc.getElementsByTagName("user")[i].childNodes[2].childNodes[0].nodeValue;
+var phone =
+xmlDoc.getElementsByTagName("user")[i].childNodes[3].childNodes[0].nodeValue;
+var email=
+xmlDoc.getElementsByTagName("user")[i].childNodes[4].childNodes[0].nodeValue;
+document.write("<br><b>User ID :&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"+uid)
+document.write("<br>User Name :&nbsp"+userName);
+document.write("<br>Address :&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp "+Address);
+document.write("<br>Phone no : &nbsp&nbsp&nbsp&nbsp&nbsp"+phone);
+document.write("<br>E - Mail : &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"+email);
+ flag =1;
+ break;
+ }
+}
+ if(flag==0)
+ {
+ alert("InValid User");
+ }
+}
+</script>
+</head>
+ <body>
+<center>
+WEB TECHNOLOGIES LAB MRCET
+www.mrcet.ac.in DEPARTMENT OF CSE Page 26
+ <h1><b>User Information</h1>
+ <form name="frm">
+User ID : <input type="text" name="uname"><br>
+<input type="button" name="btn" value="Submit" onclick="fncDisplayInfo()">
+</form>
+</center>
+</body>
+</html>
