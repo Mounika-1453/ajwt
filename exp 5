@@ -1,0 +1,93 @@
+html code........................
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <link rel="stylesheet" href="experiment5.css">
+</head>
+<body>
+    <label class="text">Hello there </label> <br>
+    <p class="box" >Hi, my name is bond ... James Bond</p>
+    <input type="submit" class="button"> <br>
+   
+    <div id="lingrad" ></div>
+    <br>
+    <div id="radgrad" ></div>
+    <br>
+    <div id="transition" ></div>
+</body>
+</html>
+         
+
+
+
+css code........................
+
+ * {
+    display: grid;
+    justify-content: center;
+   
+}
+.text {
+    font-family: helvetica;
+    font-size: 1.5em;
+    text-shadow: 2px 2px yellow;
+}
+
+.box {
+    padding: 10px;
+    border: 1px solid;
+    box-shadow: 5px 5px cyan;
+    border-radius: 5px;
+    width: 300px;
+   
+}
+
+.button {
+    height: 50px;
+    width: 100px ;
+    position: relative;
+    animation-name: mymove;
+    animation-duration: 5s;
+    color:white;
+    background-color:#993CF3;
+
+}
+
+@keyframes mymove {
+    from {left: 0px;}
+    to {left: 110px}
+   
+}
+
+.button:hover {
+    background-color: #7a30c2;
+}
+
+
+#lingrad {
+    width: 322px;
+    height: 100px;
+    background-image: linear-gradient( to bottom right, violet,indigo,blue,green,yellow,orange,red);
+   
+}
+
+#radgrad {
+    width: 322px;
+    height: 200px;
+    background-image: radial-gradient(#387989, #6dd5ed);
+}
+
+#transition {
+    width: 100px;
+    height: 100px;
+    transition: width 2s;
+    background: violet;
+    -ms-transform: rotate(3deg);
+    transform: rotate(3deg);
+}
+
+#transition:hover {
+    width: 322px;
+}
