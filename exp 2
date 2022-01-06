@@ -1,0 +1,29 @@
+<!DOC TYPE html>
+<html>
+<head>
+<title>Web Technology>/title>
+</head>
+<body>
+<a href="#Backend Development">Backend Development</a>
+<h1>Web Technology</h1>
+<p>Web Technology refers to the various tools and techniques that are utilized in the process of communication between different types of devices over the internet. A web browser is used to access web pages.
+ Web browsers can be defined as programs that display text, data, pictures, animation, and video on the Internet. Hyperlinked resources on the World Wide Web can be accessed using software interfaces provided by Web browsers.</p>
+<h2>Types of Web Technologies</h2>
+<ol>
+<li>World Wide Web</li>
+<li>Web Browser</li>
+<li>Web Server</li>
+<li>Web Pages</li>
+</ol>
+<h2>Web Development</h2>
+<ul>
+<li>Front End Development</li>
+<li>Backend Development</li>
+</ul>
+<h3>Front End Development</h3>
+<p>The front end portion is built by using some languages like HTML,CSS,Javascript,AJAX.There are many other languages through,which one can do front-end development depending upon the framework for example Flutter user Dart,React uses JavaScript and Django uses Python,and much more.</p>
+<h3><a name="Backend Development">Back End Development</a></h3>
+<p>Backend Development is the server side of a developmennt.It is everything that the users dont see and contains behind-the-scences activities that occur when performing any action on a website.It focuses primarily on databases,backend logic,APIS,and Servers. ...Thus,it is known as the backend.The back end portion is built by using some languages like PHP,Node.js,Python,Ruby,Java,Javascript,Golang,c# etc</p>
+<a>href="https://www.geeksforgeeks.org/web-tecnhology/#:~:text=Web%20Technology%20refers%20to%20%the,used%20to20%access%2">more about web technology</a>
+</body>
+</html>
