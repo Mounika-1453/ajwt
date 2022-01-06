@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+
+<title>Social Media</title>
+
+
+
+<style>
+
+.myDiv {
+  border: 5px outset red;
+  background-color: lightblue;    
+  text-align: center;
+  }
+</style>
+</head>
+
+<body>
+<div class="myDiv">
+ <h1>Social Media</h1>
+</div>
+</body>
+
+
+
+
+<body style="background-color:powderblue;">
+ 
+   
+    <p style="background-color:yellow;">Social media is a computer-based technology that facilitates the sharing of ideas, thoughts, and information through the building of virtual networks and communities. By design, social media is Internet-based and gives users quick electronic communication of content. Content includes personal information, documents, videos, and photos. Users engage with social media via a computer, tablet, or smartphone via web-based software or applications.</p>
+ 
+<ul>
+  <h4 style="'right';color:red;">examples of social media</h4>
+  <ol>
+     <li>Facebook</li>
+     <li>Instagram</li>
+     <li>Whatsapp</li>
+     <li>Snapchat</li>
+ </ol>
+</ul>
+
+   
+      <h3 style="text-align:left;color:red;">PROS <span style="color:blue">and</span> CONS</h3>
+     
+<ul>
+    <h4 style="'right';color:red;">PROS</h4>
+</ul>
+<ul>
+
+    <li>Put yourself out there in a good way</li>
+    <li>Connect with students in other educational systems</li>
+
+</ul>
+<ol>
+    <h4 style="'right';color:red;">CONS</h4>  
+</ol>
+<ul>
+    <li>Posting inappropriate statuses/pictures</li>
+    <li>Making people feel bad about themselves</li>
+</ul>
+
+</body>
+</html>
