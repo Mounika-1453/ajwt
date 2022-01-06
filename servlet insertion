@@ -1,0 +1,65 @@
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+ 
+ 
+public class ServletInsertion extends HttpServlet {
+ 
+      
+    public void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+ 
+        response.setContentType("text/html");
+        PrintWriter out = response.getWriter();
+        Connection con = null;
+         
+        String id = request.getParameter("Id");
+        int Id = Integer.parseInt(id);
+        String firstName = request.getParameter("firstName");
+        String lastName = request.getParameter("lastName");
+        String salary = request.getParameter("salary");
+        String city = request.getParameter("city");
+         
+         
+         
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/test","root","");
+            Statement statement = con.createStatement(); 
+             
+            int result = statement.executeUpdate("insert into employee  values('"+Id+"',"+"'"+firstName+"',"+"'"+lastName+"','"+salary+"','"+city+"')");
+             
+            out.println(result +" row sccessfully inserted your data");
+             
+ 
+            out.flush();
+            out.close();
+        } catch (ClassNotFoundException e) {
+             
+            e.printStackTrace();
+        } catch (SQLException e) {
+             
+            e.printStackTrace();
+         
+        }finally{
+            try {
+                con.close();
+            } catch (SQLException e) {
+             
+                e.printStackTrace();
+            }
+             
+        }
+         
+         
+         
+    }
+ 
+}
